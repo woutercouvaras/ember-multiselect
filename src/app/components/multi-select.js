@@ -1,14 +1,22 @@
 export default Em.Component.extend({
   searchText: "",
+  showDetails: false,
   viewLimit: 20,
+  selections: null,  // bound to controller
   content: [],
   filteredRecords: [],
   loadRecords: function() {
     this.set('filteredRecords', this.get('content'));
   }.observes('content').on('init'),
   selectedRecords: function() {
-    return this.get('filteredRecords').filterBy('selected', true);
-  }.property('filteredRecords.@each.selected'),
+    return this.get('content').filterBy('selected', true);
+  }.property('content.@each.selected'),
+  updateSelections: function() {
+    this.set('selections', this.get('selectedRecords'));
+  }.observes('content.@each.selected'),
+  selectedRecordsNum: function() {
+    return this.get('selectedRecords.length');
+  }.property('selectedRecords.@each'),
   noRecords: function() {
     return this.get('filteredRecords.length') < 1;
   }.property('filteredRecords.@each'),
@@ -43,6 +51,9 @@ export default Em.Component.extend({
     },
     select: function(record) {
       record.set('selected', !record.get('selected'));
+    },
+    toggleOpen: function() {
+      this.set('showDetails', !this.get('showDetails'));
     }
   }
 });

@@ -1,1 +1,12 @@
-{{multi-select content=content}}
+<div class="pull-left">
+  {{multi-select content=authors name="authors" selections=selectedAuthors}}
+</div>&nbsp;&nbsp;&nbsp;
+<div class="pull-left">
+{{multi-select content=books name="books" selections=selectedBooks}}
+</div>
+<div class="clearfix"></div>
+
+<br/><br/>
+
+<p>Number of authors selected: {{selectedAuthorsNo}}</p>
+<p>Number of books selected: {{selectedBooksNo}}</p>
