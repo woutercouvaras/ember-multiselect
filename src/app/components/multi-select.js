@@ -5,6 +5,7 @@ export default Em.Component.extend({
   selections: null,  // bound to controller
   content: [],
   filteredRecords: [],
+  displayName: 'name',
   loadRecords: function() {
     this.set('filteredRecords', this.get('content'));
   }.observes('content').on('init'),
@@ -22,19 +23,20 @@ export default Em.Component.extend({
   }.property('filteredRecords.@each'),
   updateTable: function() {
     Em.debug("Update table records");
-    var fc = this.get('content'), sd = this.get('searchText');
+    var fc = this.get('content'), sd = this.get('searchText'),
+        dn = this.get('displayName');
     if (Em.isBlank(sd)) {
       this.set('filteredRecords', this.get('selectedRecords'));
       return;
     }
     if (sd !== '*') {
-    sd = sd.toLowerCase();
+      sd = sd.toLowerCase();
       fc = fc.filter(function(row) {
-        return row.displayName.toLowerCase().indexOf(sd) > -1;
+        return row.get(dn).toLowerCase().indexOf(sd) > -1;
       });
     }
     if (fc.get('length') > this.get('viewLimit')) {
-      fc = fc.splice(0, this.get('viewLimit'));
+      fc = fc.slice(0, this.get('viewLimit'));
     }
     this.set('filteredRecords', fc);
   }.observes('searchText'),

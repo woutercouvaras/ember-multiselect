@@ -13,10 +13,10 @@
   {{else}}
   <table class="table table-hovered table-striped">
   <tbody>
-    {{#each filteredRecords}}
+    {{#each r in filteredRecords}}
     <tr>
-      <td>{{input type="checkbox" name="this.selected" checked=this.selected}}</td>
-      <td><span {{action "select" this}}>{{displayName}}</span></td>
+      <td>{{input type="checkbox" name="r.selected" checked=r.selected}}</td>
+      <td><span {{action "select" r}}>{{get-name r displayName}}</span></td>
     </tr>
     {{/each}}
   </tbody>
