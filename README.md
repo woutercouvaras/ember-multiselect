@@ -8,7 +8,7 @@ Usage
 1. Include `ember-typeaheadjs` in your project
 2. Include it in your template as follows:
 
-    {{multi-select content=books name="books" selections=selectedBooks}}
+    {{multi-select content=books name="books" selected=selectedBooks}}
 
 `name` is the button label
 `content` contains the list of items
