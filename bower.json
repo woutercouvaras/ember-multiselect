@@ -12,7 +12,7 @@
     "src",
     "bower.json",
     "README.md",
-    "LICENSE",
+    "LICENSE"
   ],
   "dependencies": {
     "ember": ">=1.5.0"
