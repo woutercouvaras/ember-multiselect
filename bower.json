@@ -1,0 +1,8 @@
+{
+  "name": "ember-multiselect",
+  "version": "1.0.0-beta-1",
+  "main": "./ember-multiselect.js",
+  "dependencies": {
+    "ember": ">=1.5.0"
+  }
+}
