@@ -6,21 +6,6 @@
   <script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.0.0/handlebars.js"></script>
   <script src="http://builds.emberjs.com/ember-latest.js"></script>
   <script src="../ember-multiselect.js"></script>
-  <style>
-    .ember-view {
-      -webkit-animation: debug .3s;
-    }
-
-    @-webkit-keyframes debug {
-      0% { 
-        background-color: yellow;
-      }
-      100% {
-        background-color: inherit;
-      }
-    }
-
-  </style>
   <script type="text/javascript">
     App = Ember.Application.create();
     App.Router.map(function() {
@@ -41,10 +26,6 @@
   <title>Ember Multi-select Test</title>
 </head>
 <body>
-  <script type="text/x-handlebars">
-    {{outlet}}
-  </script>
-
   <script type="text/x-handlebars" data-template-name="index">
     {{multi-select content=myList name="Invitees" selected=pplComing displayName="showme"}}
 
@@ -54,35 +35,6 @@
       <li>{{name}}</li>
     {{/each}}
     </ul>
-  </script>
-
-  <script type="text/x-handlebars" data-template-name="multi-select1">
-    <div {{bind-attr class=":btn-group showDetails:open"}}>
-      <button class="btn btn-default dropdown-toggle" {{action "toggleOpen"}}>{{name}} ({{selectedRecordsNum}}) <span class="caret"></span></button>
-      <div class="dropdown-menu" role="menu" style="width:300px">
-      {{input type="text" class="form-control" value=searchText placeholder="Type to search" autofocus="autofocus"}}
-      <br/>
-      <div class="toolbar">
-          <button {{action "selectAll"}} type="button" class="btn btn-default">Select All</button>
-          <button {{action "deselectAll"}} type="button" class="btn btn-default">De-select All</button>
-      </div>
-      <br/>
-      {{#if noRecords}}
-      <p><span class="label label-warning">Note:</span> No records matching your filter. Try * to get some records</p>
-      {{else}}
-      <table class="table table-hovered table-striped">
-      <tbody>
-        {{#each r in filteredRecords}}
-        <tr>
-          <td>{{input type="checkbox" name="r.selected" checked=r.selected}}</td>
-          <td><span {{action "select" r}}>{{get-name r displayName}}</span></td>
-        </tr>
-        {{/each}}
-      </tbody>
-      </table>
-      {{/if}}
-      </div>
-    </div>
   </script>
 </body>
 </html>
