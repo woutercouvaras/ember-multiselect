@@ -35,7 +35,7 @@
 
       data.buffer.push("<div ");
       data.buffer.push(escapeExpression(helpers['bind-attr'].call(depth0, {hash:{
-        'class': (":btn-group showDetails:open")
+        'class': (":btn-group isOpen:open")
       },hashTypes:{'class': "STRING"},hashContexts:{'class': depth0},contexts:[],types:[],data:data})));
       data.buffer.push(">\n<button class=\"btn btn-default dropdown-toggle\" ");
       data.buffer.push(escapeExpression(helpers.action.call(depth0, "toggleOpen", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["STRING"],data:data})));
@@ -67,7 +67,7 @@
   Em.MultiSelectComponent = Em.Component.extend({
     layoutName: 'components/multi-select',
     searchText: "",
-    showDetails: false,
+    isOpen: false,
     viewLimit: 20,
     selected: null,  // bound to controller
     content: [],
@@ -122,7 +122,7 @@
         record.set('selected', !record.get('selected'));
       },
       toggleOpen: function() {
-        this.set('showDetails', !this.get('showDetails'));
+        this.set('isOpen', !this.get('isOpen'));
       }
     }
   });

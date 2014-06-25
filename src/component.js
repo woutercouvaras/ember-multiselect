@@ -4,7 +4,7 @@
 Em.MultiSelectComponent = Em.Component.extend({
   layoutName: 'components/multi-select',
   searchText: "",
-  showDetails: false,
+  isOpen: false,
   viewLimit: 20,
   selected: null,  // bound to controller
   content: [],
@@ -59,7 +59,7 @@ Em.MultiSelectComponent = Em.Component.extend({
       record.set('selected', !record.get('selected'));
     },
     toggleOpen: function() {
-      this.set('showDetails', !this.get('showDetails'));
+      this.set('isOpen', !this.get('isOpen'));
     }
   }
 });

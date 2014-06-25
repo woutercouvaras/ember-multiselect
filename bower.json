@@ -1,6 +1,6 @@
 {
   "name": "ember-multiselect",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A multi select, searchable list in a button dropdown",
   "main": "./ember-multiselect.js",
   "keywords": [
