@@ -1,5 +1,6 @@
 <div {{bind-attr class=":btn-group isOpen:open"}}>
   <button class="btn btn-default dropdown-toggle" {{action "toggleOpen"}}>{{name}} ({{selectedRecordsNum}}) <span class="caret"></span></button>
+  {{#if isOpen}}
   <div class="dropdown-menu" role="menu" style="width:300px">
   {{input type="text" class="form-control" value=searchText placeholder="Type to search" autofocus="autofocus"}}
   <br/>
@@ -23,4 +24,5 @@
   </table>
   {{/if}}
   </div>
+  {{/if}}
 </div>
