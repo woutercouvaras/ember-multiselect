@@ -157,6 +157,9 @@ function program5(depth0,data) {
       }
       this.set('filteredRecords', fc);
     }.observes('searchText'),
+    loadOnContentChange: function() {
+      Em.run.once(this, 'updateTable');
+    }.observes('content'),
     actions: {
       selectAll: function() {
         this.get('filteredRecords').forEach(function(r) {
