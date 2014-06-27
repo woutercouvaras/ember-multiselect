@@ -46,7 +46,7 @@ Em.MultiSelectComponent = Em.Component.extend({
   }.observes('searchText'),
   loadOnContentChange: function() {
     Em.run.once(this, 'updateTable');
-  }.observes('content'),
+  }.observes('content.@each'),
   actions: {
     selectAll: function() {
       this.get('filteredRecords').forEach(function(r) {
