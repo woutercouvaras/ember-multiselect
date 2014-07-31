@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Ember CLI Multiselect</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {{BASE_TAG}}
+
+    <link rel="stylesheet" href="assets/vendor.css">
+    <link rel="stylesheet" href="assets/ember-cli-multiselect.css">
+  </head>
+  <body>
+    <script>
+      window.EmberMultiselectENV = {{ENV}};
+      window.EmberENV = window.EmberMultiselectENV.EmberENV;
+    </script>
+    <script src="assets/vendor.js"></script>
+    <script src="assets/ember-cli-multiselect.js"></script>
+    <script>
+      window.EmberMultiselect = require('ember-cli-multiselect/app')['default'].create(EmberMultiselectENV.APP);
+    </script>
+  </body>
+</html>

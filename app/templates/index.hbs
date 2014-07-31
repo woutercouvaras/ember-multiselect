@@ -1,0 +1,17 @@
+<div class="row">
+  <div class="col-md-4">
+    {{multi-select content=myList name="Invitees" selected=pplComing
+                   displayName="showme" isOpen=dropdownOpen}}
+  </div>
+  <div class="col-md-6">
+    <h2>People Coming</h2>
+    <ul>
+    {{#each pplComing}}
+      <li>{{name}}</li>
+    {{/each}}
+    </ul>
+  </div>
+  <div class="col-md-2">
+    <p>Button {{#if dropdownOpen}}open{{else}}closed{{/if}}</p>
+  </div>
+</div>
