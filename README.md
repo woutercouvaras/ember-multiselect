@@ -1,4 +1,4 @@
-#Ember CLI Multiselec
+#Ember CLI Multi-select
 
 _Note_: This is very much still a work in progress. Currently it has no styles, but if you already use bootstrap 3 it will look decent.
 
