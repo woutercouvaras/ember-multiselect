@@ -1,12 +1,14 @@
-ec-multiselect
-==============
+#Ember CLI Multi-select
 
-Multi-select dropdown box with batteries
+_Note_: This is very much still a work in progress. Currently it has no styles, but if you already use bootstrap 3 it will look decent.
 
-Usage
-====
-1. Include `ember-typeaheadjs` in your project
-2. Include it in your template as follows:
+## Description
+This is multiselect box that opens beneath a button. In the box one can select elements, filter the list by a text search and select all or deselect all.
+
+## Installation
+npm install ember-cli-multiselect --save-dev
+
+##Usage
 
     {{multi-select content=books name="books" selected=selectedBooks}}
 
