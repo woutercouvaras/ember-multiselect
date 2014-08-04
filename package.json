@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-multiselect",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A fancy multi-select dropdown for ember cli",
   "ember-addon-main": "lib/ember-cli-multiselect.js",
   "keywords": [

@@ -1,3 +1,5 @@
+import Em from 'ember';
+
 export default Em.Controller.extend({
   myList: function() {
     return [

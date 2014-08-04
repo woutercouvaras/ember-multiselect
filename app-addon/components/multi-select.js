@@ -1,3 +1,5 @@
+import Em from 'ember';
+
 export default Em.Component.extend({
   layoutName: 'components/multi-select',
   searchText: "",
