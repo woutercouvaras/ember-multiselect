@@ -1,17 +1,51 @@
-#Ember CLI Multi-select
+# Ember-cli-multiselect
 
-_Note_: This is very much still a work in progress. Currently it has no styles, but if you already use bootstrap 3 it will look decent.
+This README outlines the details of collaborating on this Ember application.
 
-## Description
-This is multiselect box that opens beneath a button. In the box one can select elements, filter the list by a text search and select all or deselect all.
+A short introduction of this app could easily go here.
+
+## Prerequisites
+
+You will need the following things properly installed on your computer.
+
+* [Git](http://git-scm.com/)
+* [Node.js](http://nodejs.org/) (with NPM) and [Bower](http://bower.io/)
 
 ## Installation
-npm install ember-cli-multiselect --save-dev
 
-##Usage
+* `git clone <repository-url>` this repository
+* change into the new directory
+* `npm install`
+* `bower install`
 
-    {{multi-select content=books name="books" selected=selectedBooks}}
+## Running / Development
 
-`name` is the button label
-`content` contains the list of items
-`selections` is the controller variable that will be populated with the selected records
+* `ember server`
+* Visit your app at http://localhost:4200.
+
+### Code Generators
+
+Make use of the many generators for code, try `ember help generate` for more details
+
+### Running Tests
+
+* `ember test`
+* `ember test --server`
+
+### Building
+
+* `ember build` (development)
+* `ember build --environment production` (production)
+
+### Deploying
+
+Specify what it takes to deploy your app.
+
+## Further Reading / Useful Links
+
+* ember: http://emberjs.com/
+* ember-cli: http://www.ember-cli.com/
+* Development Browser Extensions
+  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
+  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
+

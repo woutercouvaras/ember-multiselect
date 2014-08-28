@@ -2,7 +2,8 @@
   "predef": {
     "document": true,
     "window": true,
-    "EmberMultiselectENV": true
+    "-Promise": true,
+    "EmberCliMultiselectENV": true
   },
   "browser" : true,
   "boss" : true,
