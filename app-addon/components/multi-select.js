@@ -4,6 +4,7 @@ export default Em.Component.extend({
   layoutName: 'components/multi-select',
   searchText: "",
   isOpen: false,
+  actionSend: false,
   viewLimit: 20,
   selected: null,  // bound to controller
   content: [],
@@ -68,6 +69,9 @@ export default Em.Component.extend({
     },
     toggleOpen: function() {
       this.set('isOpen', !this.get('isOpen'));
+    },
+    send: function() {
+      return this.get('selectedRecords');
     }
   }
 });

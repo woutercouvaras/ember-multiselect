@@ -1,1 +1,25 @@
 /* Put multiselect styles here */
+.combo-box {
+    position: absolute;
+    margin-top: 34px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+}
+
+.combo-box .toolbar button {
+    width: 49%;
+}
+
+.combo-box .actionbar button {
+    width: 100%;
+}
+
+.combo-box .actionbar {
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+}
+
+.table-striped>tbody>tr:nth-child(even) {
+    background-color: #ffffff;
+}
