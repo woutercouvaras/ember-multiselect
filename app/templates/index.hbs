@@ -1,18 +1,28 @@
 <div class="row">
-  <div class="col-md-4">
-    {{multi-select content=myList name="Invitees" selected=pplComing
-                   displayName="showme" isOpen=dropdownOpen
-                   actionSend=true actionText="Save Selections"}}
-  </div>
-  <div class="col-md-6">
-    <h2>People Coming</h2>
-    <ul>
-    {{#each pplComing}}
-      <li>{{name}}</li>
-    {{/each}}
-    </ul>
-  </div>
-  <div class="col-md-2">
-    <p>Button {{#if dropdownOpen}}open{{else}}closed{{/if}}</p>
-  </div>
+  <div class="container">
+    <div class="col-md-6">
+      {{multi-select content=myList name="Invitees" selected=pplComing
+                     displayName="showme" isOpen=dropdownOpen
+                     submit="submit" submitText="Save Selections"
+                     submitedRecords=posted}}
+    </div>
+    <div class="col-md-6 results">
+      <p>Button {{#if dropdownOpen}}open{{else}}closed{{/if}}</p>
+      <div>
+        <h2>People Coming</h2>
+        <ul>
+        {{#each pplComing}}
+          <li>{{name}}</li>
+        {{/each}}
+        </ul>
+      </div>
+      <div>
+        <h2>Submitted Selections</h2>
+        <ul>
+        {{#each posted}}
+          <li>{{name}}</li>
+        {{/each}}
+        </ul>
+      </div>
+    </div>
 </div>

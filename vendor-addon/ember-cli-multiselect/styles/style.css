@@ -7,12 +7,9 @@
     border: 1px solid #ddd;
 }
 
-.combo-box .toolbar button {
-    width: 49%;
-}
-
+.combo-box .toolbar button,
 .combo-box .actionbar button {
-    width: 100%;
+    width: 49%;
 }
 
 .combo-box .actionbar {

@@ -4,7 +4,6 @@ export default Em.Component.extend({
   layoutName: 'components/multi-select',
   searchText: "",
   isOpen: false,
-  actionSend: false,
   viewLimit: 20,
   selected: null,  // bound to controller
   content: [],
@@ -53,6 +52,9 @@ export default Em.Component.extend({
       this.set('isOpen', false);
     }
   },
+  submitedRecords: function() {
+    return !(Em.isBlank(this.get('submit')));
+  }.property('submit'),
   actions: {
     selectAll: function() {
       this.get('filteredRecords').forEach(function(r) {
@@ -70,8 +72,14 @@ export default Em.Component.extend({
     toggleOpen: function() {
       this.set('isOpen', !this.get('isOpen'));
     },
-    send: function() {
-      return this.get('selectedRecords');
+    submit: function() {
+      this.set('submitedRecords', this.get('selectedRecords'));
+    },
+    cancel: function() {
+      this.get('filteredRecords').forEach(function(r) {
+        r.set('selected', false);
+      });
+      this.set('isOpen', false);
     }
   }
 });

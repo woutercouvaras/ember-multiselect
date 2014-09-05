@@ -23,9 +23,10 @@
   </tbody>
   </table>
   {{/if}}
-  {{#if actionSend}}
+  {{#if submit}}
     <div class="actionbar">
-      <button {{action "send"}} type="button" class="btn btn-default">{{actionText}}</button>
+      <button {{action "cancel"}} type="button" class="btn btn-danger">Cancel</button>
+      <button {{action "submit"}} type="button" class="btn btn-primary">{{submitText}}</button>
     </div>
   {{/if}}
   </div>
