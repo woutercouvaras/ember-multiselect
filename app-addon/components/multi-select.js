@@ -52,7 +52,7 @@ export default Em.Component.extend({
       this.set('isOpen', false);
     }
   },
-  submitedRecords: function() {
+  submittedRecords: function() {
     return !(Em.isBlank(this.get('submit')));
   }.property('submit'),
   actions: {
@@ -73,7 +73,7 @@ export default Em.Component.extend({
       this.set('isOpen', !this.get('isOpen'));
     },
     submit: function() {
-      this.set('submitedRecords', this.get('selectedRecords'));
+      this.set('submittedRecords', this.get('selectedRecords'));
     },
     cancel: function() {
       this.get('filteredRecords').forEach(function(r) {
